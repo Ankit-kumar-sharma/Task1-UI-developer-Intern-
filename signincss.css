@@ -54,7 +54,7 @@ body
     border:1px solid  white;
 }
 
-input[type=email]
+input[type=text]
 {
     height:50px;
     width:50%;
