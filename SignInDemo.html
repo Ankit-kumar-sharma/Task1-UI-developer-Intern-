@@ -7,22 +7,24 @@
     <title>SignDemo</title>
     <link rel="stylesheet" href="signincss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="emailvalidation.js"></script>
+    <script src="password.js"></script>
 </head>
-<body>
+<body onload='document.form1.text1.focus()'>
     <div id="main">
-        <form action="/action_page.html" class="example">
+        <form onsubmit ="return verifyPassword()" action="#" class="example" name="form1">
             <i class="fa fa-user fa-2x icon"><span class="login">Login</span></i>
             <hr class="lhr">
             <label for="email" class="text1">Email ID</label>
             <i class="fa fa-envelope fa-2x icon"></i>
-            <input type="email" class="email" placeholder="example@gmail.com"required><br>
+            <input type="text" class="email" placeholder="example@gmail.com" name="text1" required><br>
             <label for="password" class="text2"></i>Password</label>
             <i class="fa fa-lock fa-2x icon"></i>
-            <input type="password" class="password" required>
+            <input type="password" class="password" id="pswd" required>
             <br>
-            <input type="submit" id="submit" required>
+            <input type="submit" id="submit" onclick="ValidateEmail(document.form1.text1)" value="submit" required>
         </form>
-
+        
     </div>
     
 </body>
